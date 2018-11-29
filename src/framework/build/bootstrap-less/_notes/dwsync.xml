@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="badges.less" server="sonikorg.defraene.be//sonikorg/" local="131878861319266380" remote="131875468200000000" Dst="1" />
+<file name="alerts.less" server="sonikorg.defraene.be//sonikorg/" local="131878861319296315" remote="131875468200000000" Dst="1" />
+<file name="bootstrap.less" server="sonikorg.defraene.be//sonikorg/" local="131878861319615433" remote="131875468200000000" Dst="1" />
+<file name="breadcrumbs.less" server="sonikorg.defraene.be//sonikorg/" local="131878861319655356" remote="131875468200000000" Dst="1" />
+<file name="button-groups.less" server="sonikorg.defraene.be//sonikorg/" local="131878861320024339" remote="131875468200000000" Dst="1" />
+<file name="buttons.less" server="sonikorg.defraene.be//sonikorg/" local="131878861320044296" remote="131875468200000000" Dst="1" />
+<file name="close.less" server="sonikorg.defraene.be//sonikorg/" local="131878861320802521" remote="131875468200000000" Dst="1" />
+<file name="carousel.less" server="sonikorg.defraene.be//sonikorg/" local="131878861320872077" remote="131875468200000000" Dst="1" />
+<file name="code.less" server="sonikorg.defraene.be//sonikorg/" local="131878861321221143" remote="131875468200000000" Dst="1" />
+<file name="component-animations.less" server="sonikorg.defraene.be//sonikorg/" local="131878861321340818" remote="131875468200000000" Dst="1" />
+<file name="dropdowns.less" server="sonikorg.defraene.be//sonikorg/" local="131878861321560229" remote="131875468200000000" Dst="1" />
+<file name="forms.less" server="sonikorg.defraene.be//sonikorg/" local="131878861321600129" remote="131875468200000000" Dst="1" />
+<file name="glyphicons.less" server="sonikorg.defraene.be//sonikorg/" local="131878861322338151" remote="131875468200000000" Dst="1" />
+<file name="grid.less" server="sonikorg.defraene.be//sonikorg/" local="131878861322368072" remote="131875468200000000" Dst="1" />
+<file name="input-groups.less" server="sonikorg.defraene.be//sonikorg/" local="131878861322697193" remote="131875468200000000" Dst="1" />
+<file name="jumbotron.less" server="sonikorg.defraene.be//sonikorg/" local="131878861322956492" remote="131875468200000000" Dst="1" />
+<file name="labels.less" server="sonikorg.defraene.be//sonikorg/" local="131878861322976449" remote="131875468200000000" Dst="1" />
+<file name="list-group.less" server="sonikorg.defraene.be//sonikorg/" local="131878861323495065" remote="131875468200000000" Dst="1" />
+<file name="media.less" server="sonikorg.defraene.be//sonikorg/" local="131878861323534959" remote="131875468200000000" Dst="1" />
+<file name="mixins.less" server="sonikorg.defraene.be//sonikorg/" local="131878861332510945" remote="131875468200000000" Dst="1" />
+<file name="modals.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333099365" remote="131875468200000000" Dst="1" />
+<file name="navbar.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333159204" remote="131875468200000000" Dst="1" />
+<file name="navs.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333548168" remote="131875468200000000" Dst="1" />
+<file name="normalize.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333568110" remote="131875468200000000" Dst="1" />
+<file name="pager.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333897229" remote="131875468200000000" Dst="1" />
+<file name="pagination.less" server="sonikorg.defraene.be//sonikorg/" local="131878861333947099" remote="131875468200000000" Dst="1" />
+<file name="panels.less" server="sonikorg.defraene.be//sonikorg/" local="131878861334625307" remote="131875468200000000" Dst="1" />
+<file name="popovers.less" server="sonikorg.defraene.be//sonikorg/" local="131878861334695098" remote="131875468200000000" Dst="1" />
+<file name="print.less" server="sonikorg.defraene.be//sonikorg/" local="131878861335153867" remote="131875468200000000" Dst="1" />
+<file name="progress-bars.less" server="sonikorg.defraene.be//sonikorg/" local="131878861335782191" remote="131875468200000000" Dst="1" />
+<file name="responsive-embed.less" server="sonikorg.defraene.be//sonikorg/" local="131878861336111308" remote="131875468200000000" Dst="1" />
+<file name="responsive-utilities.less" server="sonikorg.defraene.be//sonikorg/" local="131878861336440442" remote="131875468200000000" Dst="1" />
+<file name="scaffolding.less" server="sonikorg.defraene.be//sonikorg/" local="131878861336540176" remote="131875468200000000" Dst="1" />
+<file name="theme.less" server="sonikorg.defraene.be//sonikorg/" local="131878861336859324" remote="131875468200000000" Dst="1" />
+<file name="tables.less" server="sonikorg.defraene.be//sonikorg/" local="131878861336889426" remote="131875468200000000" Dst="1" />
+<file name="thumbnails.less" server="sonikorg.defraene.be//sonikorg/" local="131878861337467697" remote="131875468200000000" Dst="1" />
+<file name="tooltip.less" server="sonikorg.defraene.be//sonikorg/" local="131878861337527535" remote="131875468200000000" Dst="1" />
+<file name="type.less" server="sonikorg.defraene.be//sonikorg/" local="131878861337916475" remote="131875468200000000" Dst="1" />
+<file name="utilities.less" server="sonikorg.defraene.be//sonikorg/" local="131878861337976319" remote="131875468200000000" Dst="1" />
+<file name="wells.less" server="sonikorg.defraene.be//sonikorg/" local="131878861339701701" remote="131875468200000000" Dst="1" />
+<file name="variables.less" server="sonikorg.defraene.be//sonikorg/" local="131878861339721667" remote="131875468200000000" Dst="1" />
+</dwsync>

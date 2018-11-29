@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="aliases.js" server="sonikorg.defraene.be//sonikorg/" local="131878861092130044" remote="131875467600000000" Dst="1" />
+<file name="constants.js" server="sonikorg.defraene.be//sonikorg/" local="131878861092169970" remote="131875467600000000" Dst="1" />
+<file name="day-of-month.js" server="sonikorg.defraene.be//sonikorg/" local="131878861092768341" remote="131875467600000000" Dst="1" />
+<file name="day-of-week.js" server="sonikorg.defraene.be//sonikorg/" local="131878861092848119" remote="131875467600000000" Dst="1" />
+<file name="day-of-year.js" server="sonikorg.defraene.be//sonikorg/" local="131878861093387022" remote="131875467600000000" Dst="1" />
+<file name="hour.js" server="sonikorg.defraene.be//sonikorg/" local="131878861093566429" remote="131875467600000000" Dst="1" />
+<file name="millisecond.js" server="sonikorg.defraene.be//sonikorg/" local="131878861098506626" remote="131875467600000000" Dst="1" />
+<file name="minute.js" server="sonikorg.defraene.be//sonikorg/" local="131878861098536547" remote="131875467600000000" Dst="1" />
+<file name="month.js" server="sonikorg.defraene.be//sonikorg/" local="131878861099035195" remote="131875467600000000" Dst="1" />
+<file name="offset.js" server="sonikorg.defraene.be//sonikorg/" local="131878861099055145" remote="131875467600000000" Dst="1" />
+<file name="priorities.js" server="sonikorg.defraene.be//sonikorg/" local="131878861099693433" remote="131875467600000000" Dst="1" />
+<file name="quarter.js" server="sonikorg.defraene.be//sonikorg/" local="131878861099773240" remote="131875467600000000" Dst="1" />
+<file name="second.js" server="sonikorg.defraene.be//sonikorg/" local="131878861100222131" remote="131875467600000000" Dst="1" />
+<file name="timestamp.js" server="sonikorg.defraene.be//sonikorg/" local="131878861100252104" remote="131875467600000000" Dst="1" />
+<file name="timezone.js" server="sonikorg.defraene.be//sonikorg/" local="131878861100681103" remote="131875467600000000" Dst="1" />
+<file name="units.js" server="sonikorg.defraene.be//sonikorg/" local="131878861101508590" remote="131875467600000000" Dst="1" />
+<file name="week-calendar-utils.js" server="sonikorg.defraene.be//sonikorg/" local="131878861101528535" remote="131875467600000000" Dst="1" />
+<file name="week-year.js" server="sonikorg.defraene.be//sonikorg/" local="131878861101708056" remote="131875467600000000" Dst="1" />
+<file name="week.js" server="sonikorg.defraene.be//sonikorg/" local="131878861101777906" remote="131875467600000000" Dst="1" />
+<file name="year.js" server="sonikorg.defraene.be//sonikorg/" local="131878861101837697" remote="131875467600000000" Dst="1" />
+</dwsync>

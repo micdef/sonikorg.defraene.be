@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="abs-ceil.js" server="sonikorg.defraene.be//sonikorg/" local="131878861106401118" remote="131875467600000000" Dst="1" />
+<file name="abs-floor.js" server="sonikorg.defraene.be//sonikorg/" local="131878861106451037" remote="131875467600000000" Dst="1" />
+<file name="abs-round.js" server="sonikorg.defraene.be//sonikorg/" local="131878861107079032" remote="131875467600000000" Dst="1" />
+<file name="compare-arrays.js" server="sonikorg.defraene.be//sonikorg/" local="131878861107108959" remote="131875467600000000" Dst="1" />
+<file name="defaults.js" server="sonikorg.defraene.be//sonikorg/" local="131878861107866924" remote="131875467600000000" Dst="1" />
+<file name="deprecate.js" server="sonikorg.defraene.be//sonikorg/" local="131878861107896880" remote="131875467600000000" Dst="1" />
+<file name="extend.js" server="sonikorg.defraene.be//sonikorg/" local="131878861108495418" remote="131875467600000000" Dst="1" />
+<file name="has-own-prop.js" server="sonikorg.defraene.be//sonikorg/" local="131878861108575046" remote="131875467600000000" Dst="1" />
+<file name="hooks.js" server="sonikorg.defraene.be//sonikorg/" local="131878861109033809" remote="131875467600000000" Dst="1" />
+<file name="index-of.js" server="sonikorg.defraene.be//sonikorg/" local="131878861109073711" remote="131875467600000000" Dst="1" />
+<file name="is-array.js" server="sonikorg.defraene.be//sonikorg/" local="131878861109652148" remote="131875467600000000" Dst="1" />
+<file name="is-date.js" server="sonikorg.defraene.be//sonikorg/" local="131878861109702032" remote="131875467600000000" Dst="1" />
+<file name="is-function.js" server="sonikorg.defraene.be//sonikorg/" local="131878861110140856" remote="131875467600000000" Dst="1" />
+<file name="is-number.js" server="sonikorg.defraene.be//sonikorg/" local="131878861110200787" remote="131875467600000000" Dst="1" />
+<file name="is-object-empty.js" server="sonikorg.defraene.be//sonikorg/" local="131878861110879145" remote="131875467600000000" Dst="1" />
+<file name="is-object.js" server="sonikorg.defraene.be//sonikorg/" local="131878861115900313" remote="131875467600000000" Dst="1" />
+<file name="is-undefined.js" server="sonikorg.defraene.be//sonikorg/" local="131878861116139686" remote="131875467600000000" Dst="1" />
+<file name="keys.js" server="sonikorg.defraene.be//sonikorg/" local="131878861116728114" remote="131875467600000000" Dst="1" />
+<file name="map.js" server="sonikorg.defraene.be//sonikorg/" local="131878861116817864" remote="131875467600000000" Dst="1" />
+<file name="mod.js" server="sonikorg.defraene.be//sonikorg/" local="131878861117326517" remote="131875467600000000" Dst="1" />
+<file name="some.js" server="sonikorg.defraene.be//sonikorg/" local="131878861117376366" remote="131875467600000000" Dst="1" />
+<file name="to-int.js" server="sonikorg.defraene.be//sonikorg/" local="131878861117785304" remote="131875467600000000" Dst="1" />
+<file name="zero-fill.js" server="sonikorg.defraene.be//sonikorg/" local="131878861117825180" remote="131875467600000000" Dst="1" />
+</dwsync>

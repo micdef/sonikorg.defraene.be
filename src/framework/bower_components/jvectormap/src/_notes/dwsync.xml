@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="abstract-canvas-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860915390204" remote="131875467600000000" Dst="1" />
+<file name="abstract-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860915579698" remote="131875467600000000" Dst="1" />
+<file name="color-scale.js" server="sonikorg.defraene.be//sonikorg/" local="131878860915878897" remote="131875467600000000" Dst="1" />
+<file name="abstract-shape-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860915898854" remote="131875467600000000" Dst="1" />
+<file name="data-series.js" server="sonikorg.defraene.be//sonikorg/" local="131878860916527158" remote="131875467600000000" Dst="1" />
+<file name="jvectormap.js" server="sonikorg.defraene.be//sonikorg/" local="131878860916826367" remote="131875467600000000" Dst="1" />
+<file name="legend.js" server="sonikorg.defraene.be//sonikorg/" local="131878860917325056" remote="131875467600000000" Dst="1" />
+<file name="map-object.js" server="sonikorg.defraene.be//sonikorg/" local="131878860917395035" remote="131875467600000000" Dst="1" />
+<file name="marker.js" server="sonikorg.defraene.be//sonikorg/" local="131878860917963328" remote="131875467600000000" Dst="1" />
+<file name="map.js" server="sonikorg.defraene.be//sonikorg/" local="131878860918043108" remote="131875467600000000" Dst="1" />
+<file name="multimap.js" server="sonikorg.defraene.be//sonikorg/" local="131878860919110254" remote="131875467600000000" Dst="1" />
+<file name="numeric-scale.js" server="sonikorg.defraene.be//sonikorg/" local="131878860919140181" remote="131875467600000000" Dst="1" />
+<file name="ordinal-scale.js" server="sonikorg.defraene.be//sonikorg/" local="131878860919529143" remote="131875467600000000" Dst="1" />
+<file name="proj.js" server="sonikorg.defraene.be//sonikorg/" local="131878860919579002" remote="131875467600000000" Dst="1" />
+<file name="region.js" server="sonikorg.defraene.be//sonikorg/" local="131878860919967968" remote="131875467600000000" Dst="1" />
+<file name="simple-scale.js" server="sonikorg.defraene.be//sonikorg/" local="131878860920327004" remote="131875467600000000" Dst="1" />
+<file name="svg-canvas-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860920446690" remote="131875467600000000" Dst="1" />
+<file name="svg-circle-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860921134850" remote="131875467600000000" Dst="1" />
+<file name="svg-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860921204656" remote="131875467600000000" Dst="1" />
+<file name="svg-image-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860921543743" remote="131875467600000000" Dst="1" />
+<file name="svg-group-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860921563693" remote="131875467600000000" Dst="1" />
+<file name="svg-path-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860922241884" remote="131875467600000000" Dst="1" />
+<file name="svg-shape-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860922311722" remote="131875467600000000" Dst="1" />
+<file name="svg-text-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860922650795" remote="131875467600000000" Dst="1" />
+<file name="vector-canvas.js" server="sonikorg.defraene.be//sonikorg/" local="131878860922700650" remote="131875467600000000" Dst="1" />
+<file name="vml-canvas-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860923279125" remote="131875467600000000" Dst="1" />
+<file name="vml-circle-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860923338961" remote="131875467600000000" Dst="1" />
+<file name="vml-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860924196647" remote="131875467600000000" Dst="1" />
+<file name="vml-group-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860924256496" remote="131875467600000000" Dst="1" />
+<file name="vml-image-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860924894873" remote="131875467600000000" Dst="1" />
+<file name="vml-path-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860925612857" remote="131875467600000000" Dst="1" />
+<file name="vml-shape-element.js" server="sonikorg.defraene.be//sonikorg/" local="131878860925652787" remote="131875467600000000" Dst="1" />
+</dwsync>
