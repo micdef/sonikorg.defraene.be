@@ -31,9 +31,9 @@
 	 *	@param[in]	$s			Texte original
 	 *	@return		$str		Texte préparé
 	 */
-	public function txt2sql($s) {
+	function txt2sql($s) {
 		$str = str_replace("'", "''");
-		return $str
+		return $str;
 	}
 
 ?>

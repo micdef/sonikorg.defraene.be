@@ -14,13 +14,16 @@
 		//*																				 *
 		//********************************************************************************
 		private $idDB;
-		private $usn;
-		private $pwd;
-		private $email;
-		private $fname;
-		private $lname;
+		private $username;
+		private $password;
+		private $firstname;
+		private $lastname;
+		private $gender;
 		private $datein;
-		private $factive;
+		private $email;
+		private $tel;
+		private $flagactive;
+		private $flagdelete;
 		private $err;
 		
 		//********************************************************************************
@@ -30,6 +33,7 @@
 		//********************************************************************************
 		private static $table = "usr_user";
 		private static $tableVisitor = "usr_visit";
+		private static $tableToken = "usr_token";
 						
 		//********************************************************************************
 		//*																				 *
@@ -39,13 +43,16 @@
 		// Default Constructor (all to null)
 		public function __construct() {
 			$this->idDB = 0;
-			$this->usn = null;
-			$this->pwd = null;
-			$this->email = null;
-			$this->fname = null;
-			$this->lname = null;
+			$this->username = null;
+			$this->password = null;
+			$this->firstname = null;
+			$this->lastname = null;
+			$this->gender = null;
 			$this->datein = null;
-			$this->factive = null;
+			$this->email = null;
+			$this->tel = null;
+			$this->flagactive = false;
+			$this->flagdelete = false;
 			$this->err = null;
 		}
 		
@@ -56,35 +63,37 @@
 		 */
 		public function newDB($usn, $id) {
 			try {
-				/*if ($id == 0)
-					$sql = "SELECT a.*, b.idtoken FROM " . $this->table . " AS a LEFT JOIN " . $this->tokenTable . " AS b ON (a.iduser = b.iduser AND b.action = 'CKREG') WHERE email='" . $email . "'";
-				else 
-					$sql = "SELECT a.*, b.idtoken FROM " . $this->table . " AS a LEFT JOIN " . $this->tokenTable . " AS b ON (a.iduser = b.iduser AND b.action = 'CKREG') WHERE a.iduser=" . $id;*/
 				if ($id == 0)
-					$sql = "SELECT * FROM " . $table . " WHERE usn = '" . $usn . "'";
-				else
-					$sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
+					$sql = "SELECT a.*, b.idtoken FROM " . User::$table . " AS a LEFT JOIN " . User::$tableToken . " AS b ON (a.iduser = b.iduser AND b.action = 'CKREG') WHERE email='" . $email . "'";
+				else 
+					$sql = "SELECT a.*, b.idtoken FROM " . User::$table . " AS a LEFT JOIN " . User::$tableToken . " AS b ON (a.iduser = b.iduser AND b.action = 'CKREG') WHERE a.iduser=" . $id;
 				$el = getElem($sql, $_SESSION["email"]);
 				if ($el != null) {
-					$this->idDB = $el["id"];
-					$this->usn = $el["usn"];
-					$this->pwd = $el["pwd"];
-					$this->email = $el["email"];
-					$this->fname = $el["fname"];
-					$this->lname = $el["lname"];
+					$this->idDB = $el["iduser"];
+					$this->username = $el["username"];
+					$this->password = $el["password"];
+					$this->firstname = $el["firstname"];
+					$this->lastname = $el["lastname"];
+					$this->gender = $el["gender"];
 					$this->datein = $el["datein"];
-					$this->factive = $el["factive"];
+					$this->email = $el["email"];
+					$this->tel = $el["tel"];
+					$this->flagactive = $el["flagactive"];
+					$this->flagdelete = $el["flagdelete"];
 					$this->err = null;
 				}
 			} catch (Exception $ex) {
 				$this->idDB = -1;
-				$this->usn = null;
-				$this->pwd = null;
-				$this->email = null;
-				$this->fname = null;
-				$this->lname = null;
+				$this->username = null;
+				$this->password = null;
+				$this->firstname = null;
+				$this->lastname = null;
+				$this->gender = null;
 				$this->datein = null;
-				$this->factive = null;
+				$this->email = null;
+				$this->tel = null;
+				$this->flagactive = false;
+				$this->flagdelete = false;
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
 				$this->err = $ex->getMessage();
 			}
@@ -100,15 +109,18 @@
 		 *  @param[in]	$datein			The inscription date of the user
 		 *  @param[in]	$factive		If the user is active or not
 		 */
-		public function newParam($usn, $pwd, $email, $fname, $lname, $datein, $factive) {
+		public function newParam($usn, $pwd, $fname, $lname, $gender, $datein, $email, $tel, $factive, $fdelete) {
 			$this->idDB = 0;
-			$this->usn = $usn;
-			$this->pwd = encrypt($pwd);
-			$this->email = $email;
-			$this->fname = $fname;
-			$this->lname = $lname;
+			$this->username = $usn;
+			$this->password = encrypt($pwd);
+			$this->firstname = $fname;
+			$this->lastname = $lname;
+			$this->gender = $gender;
 			$this->datein = $datein;
-			$this->factive = $factive;
+			$this->email = $email;
+			$this->tel = $tel;
+			$this->flagactive = $factive;
+			$this->flagdelete = $fdelete;
 			$this->err = null;
 		}
 		
@@ -118,13 +130,16 @@
 		public function newGuest() {
 			try {
 				$this->idDB = 0;
-				$this->usn = "guest" . time();
-				$this->pwd = null;
-				$this->email = "guest" . time() . "@defraene.be";
-				$this->fname = "Guest";
-				$this->lname = time();
+				$this->username = "guest" . time();
+				$this->password = null;
+				$this->firstname = "Guest";
+				$this->lastname = time();
+				$this->gender = "M";
 				$this->datein = date("Ymd");
-				$this->factive = true;
+				$this->email = "guest" . time() . "@defraene.be";
+				$this->tel = null;
+				$this->flagactive = true;
+				$this->flagdelete = false;
 				$this->I_insertVisitor();
 				$this->err = null;
 			} catch (Exception $ex) {
@@ -139,12 +154,15 @@
 		//*																				 *
 		//********************************************************************************
 		public function getDataBaseID() { return $this->idDB; }
-		public function getUsername() { return $this->usn; }
-		public function getEmail() { return $this->email; }
-		public function getFirstName() { return $this->fname; }
-		public function getLastName() { return $this->lname; }
+		public function getUsername() { return $this->username; }
+		public function getFirstname() { return $this->firstname; }
+		public function getLastname() { return $this->lastname; }
+		public function getGender() { return $this->gender; }
 		public function getDateIN() { return $this->datein; }
-		public function isActive() { return $this->factive; }
+		public function getEmail() { return $this->email; }
+		public function getTelephone() { return $this->tel; }
+		public function isActive() { return $this->flagactive; }
+		public function isDeleted() { return $this->flagdelete; }
 		public function getError() { return $this->err; }
 		
 		//********************************************************************************
@@ -154,72 +172,53 @@
 		//********************************************************************************
 		public function setUsername($usn) {
 			try {
-				if ($idDB > 0) {
-					if ($this->checkUsername($usn)) {
-						$sql = "UPDATE " . $table . " SET usn = '" . $usn . "' WHERE id = " . $this->idDB;
-						execSQL($sql, $_SESSION["email"]);
-					} else {
-						throw new Exception("The username you want tu use is already existing in the database.");
-					}
-				}
-				$this->usn = $usn;
-				$this->err = null;
-			} catch (Exception $ex) {
-				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
-				$this->err = $ex->getMessage();
-			}
-		}
-		public function setEmail($email) {
-			try {
-				if (idDB > 0) {
-					if (checkMail($email)) {
-						$sql = "UPDATE " . $table . " SET email = '" . $email . "' WHERE id = " . $this->idDB;
-						execSQL($sql, $_SESSION["email"]);
-					} else {
-						throw new Exception("The username you want tu use is already existing in the database.");
-					}
-				}
-				$this->email = $email;
-				$this->err = null;
-			} catch (Exception $ex) {
-				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
-				$this->err = $ex->getMessage();
-			}
-		}
-		public function setPassword($pwd) {
-			try {
-				$pwdc = encrypt($pwd);
-				if ($this->idDB > 0) {
-					$sql = "UPDATE " . $table . " SET pwd = '" . $pwdc . "' WHERE id = " . $this->idDB;
+				if ($this->idDB > 0 && $this->checkUsername($usn)) {
+					$sql = "UPDATE " . User::$table . " SET username = '" . txt2sql($usn) . "' WHERE iduser = " . $this->idDB;
 					execSQL($sql, $_SESSION["email"]);
-				}
-				$this->pwd = $pwdc;
+					$this->username = $usn;
+				} elseif ($this->idDB > 0 && !$this->checkUsername($usn))
+					throw new Exception("The username you want to use is already existing in the DB");
+				else
+					$this->username = $usn;
 				$this->err = null;
 			} catch (Exception $ex) {
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
 				$this->err = $ex->getMessage();
 			}
 		}
-		public function setFirstName($fname) {
+		public function setFirstname($fname) {
 			try {
 				if ($this->idDB > 0) {
-					$sql = "UPDATE " . $table . " SET fname = '" . txt2sql($fname) . "' WHERE id = " . $this->idDB;
+					$sql = "UPDATE " . User::$table . " SET firstname = '" . txt2sql($fname) . "' WHERE iduser = " . $this->idDB;
 					execSQL($sql, $_SESSION["email"]);
 				}
-				$this->fname = $fname;
+				$this->firstname = $fname;
 				$this->err = null;
 			} catch (Exception $ex) {
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
 				$this->err = $ex->getMessage();
 			}
 		}
-		public function setLastName($lname) {
+		public function setLastname($lname) {
 			try {
 				if ($this->idDB > 0) {
-					$sql = "UPDATE " . $table . " SET lname = '" . txt2sql($lname) . "' WHERE id = " . $this->idDB;
+					$sql = "UPDATE " . User::$table . " SET lastname = '" . txt2sql($lname) . "' WHERE iduser = " . $this->idDB;
 					execSQL($sql, $_SESSION["email"]);
 				}
-				$this->lname = $lname;
+				$this->lastname = $lname;
+				$this->err = null;
+			} catch (Exception $ex) {
+				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
+				$this->err = $ex->getMessage();
+			}
+		}
+		public function setGender($gender) {
+			try {
+				if ($this->idDB > 0) {
+					$sql = "UPDATE " . User::$table . " SET gender = '" . txt2sql($gender) . "' WHERE iduser = " . $this->idDB;
+					execSQL($sql, $_SESSION["email"]);
+				}
+				$this->gender = $gender;
 				$this->err = null;
 			} catch (Exception $ex) {
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
@@ -229,7 +228,7 @@
 		public function setDateIN($datein) {
 			try {
 				if ($this->idDB > 0) {
-					$sql = "UPDATE " . $table . " SET datein = '" . date('Y-m-d', strtotime($this->datein)) . "' WHERE id = " . $this->idDB;
+					$sql = "UPDATE " . User::$table . " SET datein = '" . date('Y-m-d', strtotime($this->datein)) . "' WHERE iduser = " . $this->idDB;
 					execSQL($sql, $_SESSION["email"]);
 				}
 				$this->datein = $datein;
@@ -239,13 +238,68 @@
 				$this->err = $ex->getMessage();
 			}
 		}
+		public function setEmail($email) {
+			try {
+				if ($this->idDB > 0 && $this->checkMail($email)) {
+					$sql = "UPDATE " . User::$table . " SET email = '" . txt2sql($email) . "' WHERE iduser = " . $this->idDB;
+					execSQL($sql, $_SESSION["email"]);
+					$this->email = $email;
+				} elseif ($this->idDB > 0 && !$this->checkMail($email))
+					throw new Exception("The email you want to use is already existing in the DB");
+				else
+					$this->email = $email;
+				$this->err = null;
+			} catch (Exception $ex) {
+				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
+				$this->err = $ex->getMessage();
+			}
+		}
+		public function setTelephone($tel) {
+			try {
+				if ($this->idDB > 0) {
+					$sql = "UPDATE " . User::$table . " SET tel = '" . txt2sql($tel) . "' WHERE iduser = " . $this->idDB;
+					execSQL($sql, $_SESSION["email"]);
+				}
+				$this->tel = $tel;
+				$this->err = null;
+			} catch (Exception $ex) {
+				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
+				$this->err = $ex->getMessage();
+			}
+		}
 		private function setActive($factive) {
 			try {
 				if ($this->idDB > 0) {
-					$sql = "UPDATE " . $table . " SET factive = " . ($factive == true ? 'true' : 'false') . " WHERE id = " . $this->idDB;
+					$sql = "UPDATE " . User::$table . " SET flagactive = " . ($factive ? "true" : "false") . " WHERE iduser = " . $this->idDB;
 					execSQL($sql, $_SESSION["email"]);
 				}
-				$this->factive = $factive;
+				$this->flagactive = $factive;
+				$this->err = null;
+			} catch (Exception $ex) {
+				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
+				$this->err = $ex->getMessage();
+			}
+		}
+		private function setDeleted($fdelete) {
+			try {
+				if ($this->idDB > 0) {
+					$sql = "UPDATE " . User::$table . " SET flagdelete = " . ($fdelete ? "true" : "false") . " WHERE iduser = " . $this->idDB;
+					execSQL($sql, $_SESSION["email"]);
+				}
+				$this->flagdelete = $fdelete;
+				$this->err = null;
+			} catch (Exception $ex) {
+				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
+				$this->err = $ex->getMessage();
+			}
+		}
+		private function setPassword($pwd) {
+			try {
+				if ($this->idDB > 0) {
+					$sql = "UPDATE " . User::$table . " SET password = '" . encrypt($pwd) . "' WHERE iduser = " . $this->idDB;
+					execSQL($sql, $_SESSION["email"]);
+				}
+				$this->password = encrypt($pwd);
 				$this->err = null;
 			} catch (Exception $ex) {
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
@@ -275,25 +329,25 @@
 		//********************************************************************************
 		private function dbInsert($visitor) {
 			try {
-				if ($this->err == null)
+				if ($this->err = null)
 					if ($this->checkMail($this->email))
-						if ($this->checkUsername($this->usn)) {
-							$sql = "INSERT INTO " . $table . " (usn, pwd, email, fname, lname, datein, factive)";
-							$sql .= "VALUES ('" . txt2sql($this->usn) . "', '" . $this->pwd & "', '" . txt2sql($this->email);
-							$sql .= "', '" . txt2sql($this->fname) . "', '" . txt2sql($this-lname) . "', '";
-							$sql .= date('Y-m-d', strtotime($this->datein)) . "', " . ($this->factive == true ? 'true' : 'false') . ")";
+						if ($this->checkUsername($this->username)) {
+							$sql = "INSERT INTO " . User::$table . " (username, password, firstname, lastname, gender, datein, email, tel, flagactive, flagdelete) ";
+							$sql .= "VALUES ('" . txt2sql($this->usn) . "', '" . $this->pwd . "', '" . txt2sql($this->firstname) . "', '" . txt2sql($this->lastname);
+							$sql .= "', '" . txt2sql($this->gender) . "', '" . date('Y-m-d', strtotime($this->datein)) . "', '" . txt2sql($this->email) . "', '";
+							$sql .= txt2sql($this->tel) . "', " . ($this->flagactive ? "true" : "false") . ", " . ($this->flagdelete ? "true" : "false") . ")";
 							execSQL($sql, $_SESSION["email"]);
-							$sql = "SELECT id FROM " . $table . " WHERE usn = '" . $this->usn . "'";
+							$sql = "SELECT iduser FROM " . User::$table . " WHERE username = '" . txt2sql($this->usn) . "'";
 							$this->idDB = getValue($sql, $_SESSION["email"]);
-							if ($visitor == true)
-								$this->dbInsertVisitor($this->idDB);
+							if ($visitor)
+								dbInsertVisitor();
 							$this->err = null;
 						} else
-							throw new Exception("Le nom d'utilisateur choisi est déjà utilisé.");
+							throw new Exception("The username you want to use is already existing in the DB.");
 					else
-						throw new Exception("L'email choisi est déjà utilisé");
+						throw new Exception("The email you want to use is already existing in the DB.");
 				else
-					throw new Exception("Une erreur est encore présente, veuillez la corriger svp.");
+					throw new Exception("An error occures in the system. Please correct it and try again.");
 			} catch (Exception $ex) {
 				writeError(date('Y-m-d') . ' - ' . $ex->getMessage());
 				$this->err = $ex->getMessage();
@@ -320,7 +374,10 @@
 		public function I_checkUserName($usn) { $this->checkUsername($usn); }
 		public function I_activateUser() { $this->setActive(true); }
 		public function I_deactivateUser() { $this->setActive(false); }
+		public function I_deleteUser() { $this->setDeleted(true); }
+		public function I_undeleteUser() { $this->setDeleted(false); }
 		public function I_checkPassword($pwd) {	return (encrypt($pwd) == $this->pwd ? true : false); }
+		public function I_changePassword($pwd) { $this->setPassword($pwd); }
 		public function I_ressetError() { $this->err = null; }
 		public function I_login($pwd) {
 			if ($this->pwd == encrypt($pwd) && $this->factive == true)
@@ -367,9 +424,8 @@
 		//*																				 *
 		//********************************************************************************
 		public function equals($user) {
-			if ($this->idDB == $user->getDataBaseID() && $this->usn == $user->getUsername() && $this->email = $user->getEmail() &&
-				$this->fname == $user->getFirstName() && $this->lname == $user->getLastName() && $this->datein == $user->getDateIN() &&
-				$this->factive == $user->isActive())
+			if ($this->username == $user->username && $this->firstname == $user->firstname && $this->lastname == $user->lastname &&
+				$this->gender == $user->gender && $this->datein == $user-datein && $this->email == $user->email && $this->tel == $user->tel)
 				return true;
 			else
 				return false;

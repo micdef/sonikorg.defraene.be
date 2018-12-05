@@ -70,7 +70,7 @@ function alte_genNavbarEl(type, nb, logged) {
 			if(logged){
 				
 			}else{
-				var i = generateI("fa fa-lock text-orange");
+				var i = generateI("fas fa-lock text-orange");
 				var span = generateSPAN("hidden-xs", "Session");
 				a.append(i);
 				a.append(span);
@@ -107,11 +107,11 @@ function alte_genNavbarElMenu(type, nb, elements, session) {
 			} else {
 				var element = ["function", "icon", "text"];
 				element["function"] = session["functions"]["ocLogin"];
-				element["icon"] = "fa fa-sign-in text-green";
+				element["icon"] = "fas fa-sign-in-alt text-green";
 				element["text"] = "Se connecter";
 				el.append(alte_genNavBarMenuItem("sessionNOK", element));
 				element["function"] = session["functions"]["ocRegister"];
-				element["icon"] = "fa fa-user-plus text-orange";
+				element["icon"] = "fas fa-user-plus text-orange";
 				element["text"] = "S'enregistrer";
 				el.append(alte_genNavBarMenuItem("sessionNOK", element));
 			}

@@ -19,7 +19,7 @@
     //* PARTIE 3 : MISE EN PLACE DES VALEURS DES VARIABLES GLOBALES                *
     //*                                                                            *
     //******************************************************************************
-    $strConn = "pgsql:host=localhost;port=5432;dbname=home;user=postgres;password=sonic";
+    $strConn = "pgsql:host=private.defraene.be;port=5432;dbname=sonikorg.defraene.be;user=postgres;password=S0n1C'1984!M1Cd";
 	    
     //******************************************************************************
     //*                                                                            *

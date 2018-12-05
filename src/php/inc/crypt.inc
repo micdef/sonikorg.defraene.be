@@ -41,6 +41,22 @@
             throw $ex;
         }
     }
+
+	/*! @brief Cryptage des ID
+	 *  Cette fonction crypte les données qui ne sont pas sensibles, ce cryptage est irréversible.
+	 *	@param[in]	$s				Ce qu'il faut crypter
+	 *	@return		$qEncoded		L'élément crypté
+	 *	@throw		Toute exception générée pendant le cryptage
+	 */
+	function encrypID($s) {
+		global $cryptKey;
+		try {
+			$qEncoded = hash("sha256", $cryptKey . $s);
+			return $qEncoded;
+		} catch (Exception $ex) {
+			throw $ex;
+		}
+	}
     
     /*! @brief Cryptage des liens
      *  Cette fonction crypte les liens web envoyés par email. Ce cryptage est réversible

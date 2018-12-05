@@ -1,0 +1,85 @@
+11:00:53 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:00:53 ==> guest1544004053@defraene.be - guest1544004053@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:00:53 ==> guest1544004053@defraene.be - guest1544004053@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:04:26 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:04:26 ==> guest1544004266@defraene.be - guest1544004266@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:04:26 ==> guest1544004266@defraene.be - guest1544004266@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:10:12 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:10:12 ==> guest1544004612@defraene.be - guest1544004612@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:10:12 ==> guest1544004612@defraene.be - guest1544004612@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:10:58 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:10:58 ==> guest1544004658@defraene.be - guest1544004658@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:10:58 ==> guest1544004658@defraene.be - guest1544004658@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:15:10 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:15:10 ==> guest1544004910@defraene.be - guest1544004910@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:15:10 ==> guest1544004910@defraene.be - guest1544004910@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:18:32 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:18:32 ==> guest1544005112@defraene.be - guest1544005112@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:18:32 ==> guest1544005112@defraene.be - guest1544005112@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:42:18 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:42:27 ==> guest1544006538@defraene.be - guest1544006538@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:42:27 ==> guest1544006538@defraene.be - guest1544006538@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:42:57 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:42:57 ==> guest1544006577@defraene.be - guest1544006577@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:42:57 ==> guest1544006577@defraene.be - guest1544006577@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:44:00 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:44:00 ==> guest1544006640@defraene.be - guest1544006640@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:44:00 ==> guest1544006640@defraene.be - guest1544006640@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:45:17 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:45:17 ==> guest1544006717@defraene.be - guest1544006717@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:45:17 ==> guest1544006717@defraene.be - guest1544006717@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:46:42 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:46:42 ==> guest1544006802@defraene.be - guest1544006802@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:46:42 ==> guest1544006802@defraene.be - guest1544006802@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:47:04 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:47:04 ==> guest1544006824@defraene.be - guest1544006824@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:47:04 ==> guest1544006824@defraene.be - guest1544006824@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:51:33 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:51:33 ==> guest1544007093@defraene.be - guest1544007093@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:51:33 ==> guest1544007093@defraene.be - guest1544007093@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:52:02 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:52:02 ==> guest1544007122@defraene.be - guest1544007122@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:52:02 ==> guest1544007122@defraene.be - guest1544007122@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:53:42 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:53:42 ==> guest1544007222@defraene.be - guest1544007222@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:53:42 ==> guest1544007222@defraene.be - guest1544007222@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:54:49 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:54:49 ==> guest1544007289@defraene.be - guest1544007289@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:54:49 ==> guest1544007289@defraene.be - guest1544007289@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:55:48 ==> 2018-12-05 - An error occures in the system. Please correct it and try again.
+11:55:48 ==> guest1544007348@defraene.be - guest1544007348@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".
+11:55:48 ==> guest1544007348@defraene.be - guest1544007348@defraene.be - 23503 - 7 - ERROR:  insert or update on table "usr_token" violates foreign key constraint "FK-USR_Token-IDUser"
+DETAIL:  Key (iduser)=(0) is not present in table "usr_user".

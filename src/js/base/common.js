@@ -513,7 +513,7 @@ function getXHR() {
  * 	@param[in] 	callback	The function which will be called when the server has give a response
  * 	@retval The response of the rpc
  */
-function callXHR(method, url, param, typersp, callback, error) {
+function callXHR(method, url, param, typersp, callback) {
 	if (method == "POST") {
 		ajx = $.ajax({
 			type: method,
@@ -578,6 +578,19 @@ function isSetCookie(cname) {
         return false;
 }
 
+function setCookie(cname, value, validity) {
+	if (validity != null) {
+		$.cookie(cname, value, {
+			path 		: '/',
+			expires 	: validity
+		});
+	} else {
+		$.cookie(cname, value, {
+			path 		: '/'
+		});
+	}
+}
+
 //******************************************************************************
 //*																			   *
 //* PART 3 : XML												   			   *
@@ -602,6 +615,29 @@ function xml2Array(xml, nodeName) {
 			}
 	}
 	return tab;
+}
+
+function xml2ArrayMenu(xml) {
+	var arritem = [];
+	var rsp = xml.getElementsByTagName("category");
+	for (i = 0; i < rsp.length ; i++) {
+		arritem[i] = []
+		arritem[i]["category"] = {'fa_icon' : " " + rsp[i].childNodes[1].firstChild.nodeValue, 
+								  'text' : " " + rsp[i].firstChild.firstChild.nodeValue, 'oc' : null };
+		arritem[i]["node"] = [];
+		var arrnode = [];
+		k=0;
+		var rsp2 = xml.getElementsByTagName("menuitem");
+		for (j = 0; j < rsp2.length; j++) {
+			if (rsp2[j].firstChild.firstChild.nodeValue == rsp[i].firstChild.firstChild.nodeValue) {
+				arrnode[k++] = {'fa_icon' : " " + rsp2[j].childNodes[1].childNodes[2].firstChild.nodeValue, 
+								'text' : " " + rsp2[j].childNodes[1].childNodes[0].firstChild.nodeValue,
+							    'oc' : null};
+			}
+		}
+		arritem[i]["node"] = arrnode;
+	}
+	return arritem;
 }
 
 //******************************************************************************
